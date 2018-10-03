@@ -18,15 +18,17 @@ AaCLAHfkBuGHXQG5oqNKg9H2yudSyd3yvy, 对应WIF为KwPRvCPeoe2y2CvqFypAzv5nVKjziQPS
 
 ## 样例
 
-从[txhsl/neo-cli-docker-fulldata](https://hub.docker.com/r/txhsl/neo-cli-docker-fulldata/)拉取tag为30k的镜像并启动，
+从[txhsl/neo-cli-docker-fulldata](https://hub.docker.com/r/txhsl/neo-cli-docker-fulldata/)拉取tag为ex30k的镜像并启动，
 
-并使用./sample中的两个钱包文件————new1.json以及new2.json，和[txhsl/neo-cli-docker](https://github.com/txhsl/neo-cli-docker)中提供的neo-gui连接到docker中的私链，你会看到他们分别拥有3万多条的交易记录。
+并使用./sample中的两个钱包文件————new1.json以及new2.json，和[txhsl/neo-cli-docker](https://github.com/txhsl/neo-cli-docker)中提供的neo-gui连接到docker中的私链，你会看到他们分别拥有3万多条的交易记录，而new1拥有一个地址和6万笔交易，new2拥有三万个地址和分别两笔交易。
 
 这是一个直接可用的测试镜像。
 
 ## 注意
 
 仅测试了json钱包的可用性，SQLite钱包也许能用。
+
+本代码待完善。
 
 # neo-tx-repeater(en)
 
@@ -50,12 +52,14 @@ The password for all the wallets are 11111111.
 
 ## sample
 
-Pull a docker image from [txhsl/neo-cli-docker-fulldata](https://hub.docker.com/r/txhsl/neo-cli-docker-fulldata/) which tag is 30k.
+Pull a docker image from [txhsl/neo-cli-docker-fulldata](https://hub.docker.com/r/txhsl/neo-cli-docker-fulldata/) which tag is ex90k.
 
-Use the wallet file in ./sample, new1.json and new2.json, to open 2 NEP6 wallets with 30k transactions each.
+Use the wallet file in ./sample, new1.json and new2.json, to open 2 NEP6 wallets, one with 1 address and 60k transactions, the other with 30k address and 2 transactions each address.
 
 That docker image can be directly used for test.
 
 ## warning
 
 Only json wallet tested, but sqlite maybe usable.
+
+This code still should be improved.
