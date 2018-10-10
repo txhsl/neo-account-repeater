@@ -174,17 +174,17 @@ namespace repeater_gui
                 Program.CurrentWallet = accountPair[i].Wallet;
                 int curWalletAmount = int.Parse(Program.CurrentWallet.GetAvailable(Blockchain.GoverningToken.Hash).ToString());
 
-                TransactionOutput[] outputs = new TransactionOutput[10];
-                for (int j = 0; j < 10; j++)
+                TransactionOutput[] outputs = new TransactionOutput[100];
+                for (int j = 0; j < 100; j++)
                 {
                     outputs[j] = new TransactionOutput
                     {
                         AssetId = Blockchain.GoverningToken.Hash,
                         ScriptHash = Wallet.ToScriptHash(accountPair[i].Address),
-                        Value = Fixed8.Parse((curWalletAmount / 10).ToString())
+                        Value = Fixed8.Parse((curWalletAmount / 100).ToString())
                     };
                 }
-                if (curWalletAmount >= amount)
+                if (curWalletAmount >= amount * 100)
                 {
                     TransactProcess(outputs, Program.CurrentWallet);
                 }
